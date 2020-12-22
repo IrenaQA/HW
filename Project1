@@ -1,0 +1,350 @@
+package com.company;
+import java.util.Random;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner number1= new Scanner(System.in);
+        //1
+        // int זה למספרים שלמים 
+        // float זה למספרים ממשיים
+        
+        //2
+        // Scanner היא ספרייה שמאפשרת לקלוט נתונים מהמשתמש
+        
+        //3
+        // System.out.println() היא פקודה שמדפיסה את מה שיש בסוגריים ואז יורדת שורה  
+          
+        //4
+        int i=5, num=20+12;
+        double num2=7.5;
+
+        //5
+        int a,b,sum,multiply;
+        System.out.println("Enter first number: ");
+        a=number1.nextInt();
+        System.out.println("Enter second number: ");
+        b=number1.nextInt();
+        sum=a+b;
+        multiply=a*b;
+        System.out.println("sum is: "+ sum+ " Multiply is: "+multiply);
+
+        //6
+        String color="blue";
+
+        //7
+        String name;
+        System.out.println("What is your name?");
+        Scanner myName=new Scanner(System.in);
+        name=myName.nextLine();
+        System.out.println("Hello "+ name+ " Welcome to Java!");
+
+        //8
+        int year=2020;
+        year+=10;
+        year-=30;
+        System.out.println("Year: "+year);
+
+        //9
+        int num1,num2,num3;
+        Scanner number1= new Scanner(System.in);
+        System.out.println("Enter first number:");
+        num1=number1.nextInt();
+        System.out.println("Enter second number:");
+        num2=number1.nextInt();
+        System.out.println("Enter third number:");
+        num3=number1.nextInt();
+        System.out.println("The average is: "+ (float)(num1+num2+num3)/3);
+
+        //10
+        int speed;
+        System.out.println("Please enter speed ");
+        speed= number1.nextInt();
+        if(speed>120)
+            System.out.println("Too fast!!");
+        else if(speed<80)
+            System.out.println("Too slow!!");
+        else
+            System.out.println("Good driver!!");
+
+        //11
+        int tomerAge,dannyAge;
+        System.out.println("Enter Tomer's age:");
+        tomerAge=number1.nextInt();
+        System.out.println("Enter Danny's age:");
+        dannyAge=number1.nextInt();
+        while(tomerAge<0 || tomerAge>120 || dannyAge<0 || dannyAge>120)
+        {
+            System.out.println("Enter age from 0-120. \nEnter Tomer's age:");
+            tomerAge=number1.nextInt();
+            System.out.println("Enter Danny's age:");
+            dannyAge=number1.nextInt();
+        }
+        if(tomerAge>dannyAge)
+            System.out.println("Tomer is "+tomerAge+" years old and he is older");
+        if(dannyAge>tomerAge)
+            System.out.println("Danny is "+dannyAge+" years old and he is older");
+        else
+            System.out.println("They are the same age");
+
+        //12
+        int num1,num2;
+        System.out.println("Enter first number: ");
+        num1= number1.nextInt();
+        System.out.println("Enter second number: ");
+        num2=number1.nextInt();
+        if(num1==num2)
+            System.out.println("Equal.");
+        else if(num1>num2)
+            System.out.println(num2);
+        else
+            System.out.println(num1);
+
+            //13
+        int num1,num2,num3;
+        System.out.println("Enter first number: ");
+        num1= number1.nextInt();
+        System.out.println("Enter second number: ");
+        num2=number1.nextInt();
+        System.out.println("Enter third number: ");
+        num3=number1.nextInt();
+        if(num1<num2 && num1>num3 || num1>num2 && num1<num3)
+            System.out.println(num1);
+        else if(num2<num1 && num2>num3 || num2>num1 && num2<num3)
+            System.out.println(num2);
+        else if(num3<num1 && num3>num2 || num3>num1 && num3<num2)
+            System.out.println(num3);
+        else
+            System.out.println("There is no middle number.");
+
+          //14
+        int a,b;
+        System.out.println("Enter first number: ");
+        a=number1.nextInt();
+        System.out.println("Enter second number: ");
+        b=number1.nextInt();
+        if(a>b)
+            System.out.println(String.format("%d %d",b,a));
+        else if(a<b)
+            System.out.println(String.format("%d %d",a,b));
+        else
+            System.out.println("The numbers are equal.");
+
+        //15
+        int i;
+        for(i=0;i<=10;i++)
+            System.out.println(i);
+
+         //16
+        int i;
+        for(i=1;i<50;i++){
+            if(i%2==1)
+                System.out.println(i);
+        }
+
+       //17
+        int random_number;
+        do {
+            Random r = new Random();
+            random_number = r.nextInt(20) + 10;
+            System.out.println("The number that was chosen: " + random_number);
+        }while(random_number!=15);
+
+        //18
+        int a;
+        System.out.println("Enter number: ");
+        a=number1.nextInt();
+        switch (a)
+        {
+            case 1:
+                System.out.println("One");
+                break;
+            case 2:
+                System.out.println("Two");
+                break;
+            case 3:
+                System.out.println("Three");
+                break;
+            default:
+                System.out.println("Unknown number");
+                break;
+        }
+
+        //19
+        int a,sum=0;
+        System.out.println("Enter number: ");
+        a=number1.nextInt();
+        while(true)
+        {
+            if(a!=0) {
+                sum += a;
+                System.out.println("Enter number: ");
+                a = number1.nextInt();
+            }
+            else
+                break;
+        }
+        System.out.println("Sum is: "+sum);
+
+         //20
+        int a;
+        System.out.println("Enter a number between 100-999: ");
+        a=number1.nextInt();
+        while(a<100 || a>=1000)
+        {
+            System.out.println("Enter a number between 100-999: ");
+            a=number1.nextInt();
+        }
+        System.out.println("The number is: "+ a/100);
+
+        //21
+        int a,sum=0,c=0;
+        System.out.println("Enter grade: ");
+        a=number1.nextInt();
+        while(a!=-1)
+        {
+            while (a<0||a>100){
+                System.out.println("Enter a grade between 0-100: ");
+                a=number1.nextInt();
+                if(a==-1)
+                    break;
+            }
+            sum+=a;
+            c++;
+            System.out.println("Enter grade: ");
+            a=number1.nextInt();
+
+        }
+        System.out.println("Average: "+ (float)sum/c);
+
+         //22
+        int a,sum=1;
+        System.out.println("Enter number: ");
+        a=number1.nextInt();
+        for(int i=2;i<=a;i++)
+            sum*=i;
+        System.out.println("Solution: "+sum);
+
+        //23
+        int a,max=0;
+        System.out.println("Enter number: ");
+        a=number1.nextInt();
+        while(a>0)
+        {
+            if(max<a)
+                max=a;
+            System.out.println("Enter number: ");
+            a=number1.nextInt();
+        }
+        System.out.println("Max number is: "+max);
+
+         //24
+        int a;
+        System.out.println("Enter number: ");
+        a=number1.nextInt();
+        for(int i=0;i<a;i++)
+            System.out.print("-");
+
+        //25
+        float a;
+        int c=0,c1=0;
+        System.out.println("Enter temperature: ");
+        a=number1.nextFloat();
+        while(a!=-1)
+        {
+            while (a<35||a>42){
+                System.out.println("There is no such temperature. try again.\nEnter temperature: ");
+                a=number1.nextFloat();
+                if(a==-1)
+                    break;
+            }
+            if(a<=37) {
+                c++;
+                System.out.println("Welcome");
+            }
+            else if(a>37){
+                c1++;
+                System.out.println("Sorry you cannot enter;");
+            }
+            System.out.println("Enter temperature: ");
+            a=number1.nextFloat();
+        }
+        System.out.println("Number of people that entered: "+c+ "\nNumber of people that did not enter: "+c1);
+
+        //26
+        int number,c=0,i;
+        Random r = new Random();
+        int random_number,random_number1,random_number2;
+        random_number=r.nextInt(100) + 1;
+        random_number1=r.nextInt(100) + 1;
+        random_number2=r.nextInt(100) + 1;
+        System.out.println(random_number+ " "+random_number1+" "+random_number2);
+        for(i=0;i<3;i++)
+        {
+            System.out.println("Enter number: ");
+            number=number1.nextInt();
+            //System.out.println(random_number);
+            if(number==random_number || number==random_number1 || number==random_number2)
+                c++;
+        }
+        System.out.println(c);
+        if(c==1)
+            System.out.println("You won 100 shekel!");
+        else if(c==2)
+            System.out.println("You won 100000 shekel!");
+        else if(c==3)
+            System.out.println("You won a million shekel!");
+        else
+            System.out.println("You lost!");
+
+        //27
+        int i;
+        float number,num1,sum=0;
+        System.out.println("Enter shekels per hour: ");
+        number=number1.nextFloat();
+        System.out.println("Enter working hours: ");
+        num1=number1.nextFloat();
+        while(number<29.12)
+        {
+            System.out.println("Enter correct amount of shekels per hour: ");
+            number=number1.nextFloat();
+        }
+        while(num1<0)
+        {
+            System.out.println("Enter correct amount of hours: ");
+            num1=number1.nextFloat();
+        }
+        sum=number*num1;
+        if(sum<1000)
+            System.out.println(String.format("the salary is: %.2f",(sum-sum*0.02)));
+        else if(sum>1000 && sum<=5000)
+            System.out.println(String.format("the salary is: %.2f",(sum-sum*0.1)));
+        else
+            System.out.println(String.format("the salary is: %.2f",(sum-sum*0.2)));
+
+        //28
+        int number;
+        Random r = new Random();
+        int random_number = r.nextInt(3) + 1;
+        System.out.println("Please choose a number: \n1- rock\n2-paper\n3-scissors");
+        Scanner chooseNumber = new Scanner(System.in);
+        number = chooseNumber.nextInt();
+        while(number<1 || number>3) {
+            System.out.println("Choose one of the options: \n1- rock\n2-paper\n3-scissors");
+            number = chooseNumber.nextInt();
+        }
+        System.out.println("Computer's choice: "+random_number);
+        if(number==random_number)
+            System.out.println("It's a tie");
+        else
+        {
+            if(number==1 && random_number==3 || number==2 && random_number==1 || number==3 && random_number==2)
+                System.out.println("You win!");
+            else
+                System.out.print("Computer wins!");
+
+
+        }
+        }
+}
